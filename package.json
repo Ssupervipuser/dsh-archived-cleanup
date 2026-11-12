@@ -1,0 +1,58 @@
+{
+  "name": "dsh-archived-cleanup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Review and permanently delete archived conversations: removes the log, cached projections, and workspace entry.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ssupervipuser/dsh-archived-cleanup.git"
+  },
+  "homepage": "https://github.com/Ssupervipuser/dsh-archived-cleanup#readme",
+  "bugs": {
+    "url": "https://github.com/Ssupervipuser/dsh-archived-cleanup/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "cordis",
+    "plugin",
+    "deepseek",
+    "archived",
+    "archive",
+    "cleanup",
+    "delete",
+    "sessions"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

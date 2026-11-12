@@ -1,0 +1,6 @@
+# Bundle patch layer: the row loads ./index.js as the Host half (a plain
+# Cordis plugin); the `dsh.client` declaration in package.json makes the web
+# app load ./client.js as the browser half.
+- insert:
+    - id: dsh-archived-cleanup
+      name: dsh-archived-cleanup

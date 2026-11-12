@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Archived conversations cleanup",
+    "description": "Review archived conversations and delete them permanently, freeing their logs and cached projections."
+  }
+}
